@@ -20,11 +20,11 @@ class MainActivity : AppCompatActivity() {
     fun paperButtonPressed(view: View){
         val opponentChoice = Random.nextInt(3)
         when(opponentChoice){
-            0 -> whatTheyChose.text = "Com : paper"
-            1 -> whatTheyChose.text = "Com : rock"
-            2 -> whatTheyChose.text = "Com : scissors"
+            0 -> whatTheyChose.text = "Com: paper"
+            1 -> whatTheyChose.text = "Com: rock"
+            2 -> whatTheyChose.text = "Com: scissors"
         }
-        whatWeChose.text = "P1 : paper "
+        whatWeChose.text = "P1: paper "
 
         when(opponentChoice){
             0 -> winLoseView.text = "DRAW"
@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
     fun rockButtonPressed(view: View){
         val opponentChoice = Random.nextInt(3)
         when(opponentChoice){
-            0 -> whatTheyChose.text = "Com : paper"
-            1 -> whatTheyChose.text = "Com : rock"
-            2 -> whatTheyChose.text = "Com : scissors"
+            0 -> whatTheyChose.text = "Com: paper"
+            1 -> whatTheyChose.text = "Com: rock"
+            2 -> whatTheyChose.text = "Com: scissors"
         }
-        whatWeChose.text = "P1 : rock "
+        whatWeChose.text = "P1: rock "
 
         when(opponentChoice){
             0 -> winLoseView.text = "Pemain 2 MENANG!"
@@ -51,17 +51,24 @@ class MainActivity : AppCompatActivity() {
     fun scissorsButtonPressed(view: View){
         val opponentChoice = Random.nextInt(3)
         when(opponentChoice){
-            0 -> whatTheyChose.text = "Com : paper"
-            1 -> whatTheyChose.text = "Com : rock"
-            2 -> whatTheyChose.text = "Com : scissors"
+            0 -> whatTheyChose.text = "Com: paper"
+            1 -> whatTheyChose.text = "Com: rock"
+            2 -> whatTheyChose.text = "Com: scissors"
         }
-        whatWeChose.text = "P1 : scissors "
+        whatWeChose.text = "P1: scissors "
 
         when(opponentChoice){
             0 -> winLoseView.text = "Pemain 1 MENANG!"
             1 -> winLoseView.text = "Pemain 2 MENANG!"
             2 -> winLoseView.text = "DRAW"
         }
+    }
+
+    fun refreshButton(view:View){
+        whatTheyChose.text =""
+        whatWeChose.text =""
+
+        winLoseView.text=""
     }
 
 }

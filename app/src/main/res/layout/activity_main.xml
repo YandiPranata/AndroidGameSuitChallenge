@@ -17,6 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scissorsButtonPressed"
+        android:text="Scissors"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/iv_gunting1"
+        app:layout_constraintTop_toBottomOf="@+id/iv_gunting1" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
@@ -126,13 +136,13 @@
     <ImageView
         android:id="@+id/iv_refresh"
         android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/refresh"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/guideline6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_gunting2" />
 
     <Button
         android:id="@+id/btn_rock"
@@ -158,20 +168,23 @@
         android:id="@+id/btn_scissors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="scissorsButtonPressed"
-        android:text="Scissors"
+        android:layout_marginTop="4dp"
+        android:onClick="refreshButton"
+        android:text="Refresh"
         android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="@+id/iv_gunting1"
-        app:layout_constraintTop_toBottomOf="@+id/iv_gunting1" />
+        app:layout_constraintEnd_toEndOf="@+id/iv_refresh"
+        app:layout_constraintStart_toStartOf="@+id/iv_refresh"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <TextView
         android:id="@+id/winLoseView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_style"
         android:text=""
         android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
@@ -182,7 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
         android:fontFamily="serif-monospace"
-        android:text="Pemain 1"
+        android:text=""
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/iv_vs"
@@ -196,7 +209,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="serif-monospace"
-        android:text="Computer"
+        android:text=""
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/iv_vs"
